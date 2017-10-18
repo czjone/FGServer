@@ -15,10 +15,9 @@
 
 State Server::Run(){
 	LOGD("FGServer Start ...");
-	std::string str("set [aaa] to [bbb]");
-	std::string tag = FGCore::StrTool::replace_all(str,"[aaa]","test name");
-	std::string tag1 = FGCore::StrTool::replace_all(tag,"[bbb]","test name1");
-	LOGD("aaaaaa");
+	while(true) {
+		LOGD("sssssssssssssss");
+	}
 	LOGD("FGServer Stop ...");
 	return -1;
 }
