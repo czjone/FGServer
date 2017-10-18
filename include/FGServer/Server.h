@@ -4,8 +4,8 @@
 #include <FGCore/Types.h>
 
 class Server {
-public:
-	State Run();
+	public:
+		State Run();
 };
 
 #endif

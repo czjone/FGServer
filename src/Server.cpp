@@ -15,9 +15,9 @@
 
 State Server::Run(){
 	LOGD("FGServer Start ...");
-	while(true) {
-		LOGD("sssssssssssssss");
-	}
+	// while(true) {
+		
+	// }
 	LOGD("FGServer Stop ...");
 	return -1;
 }
