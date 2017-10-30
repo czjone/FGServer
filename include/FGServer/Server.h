@@ -28,11 +28,15 @@ private:
 
 public:
 
-	int Accept();
+	FGServer();
+
+	virtual ~FGServer();
+
+	virtual int Accept();
 
 private:
 
-	inline int GetRet() {return mRet;};
+	inline int GetRet() { return mRet; };
 
 };
 

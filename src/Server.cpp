@@ -6,8 +6,16 @@
 
 using namespace FGSocket;
 
+FGServer::FGServer(){
+
+}
+
+FGServer::~FGServer(){
+
+}
+
 int FGServer::Accept(){
-	// this->addEventListner(,Callback callback,this);
+	FGSocket::Server::addEventlistener(FGSocket::Server::EVENTType::ON_CLIENT_CONNECTED,EventHandler * handler);
 	FGSocket::Server::Accept();
 	return this->GetRet();
 }
