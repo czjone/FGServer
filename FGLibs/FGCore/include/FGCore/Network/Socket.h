@@ -1,94 +1,60 @@
-#ifndef __FG_SOCKET_H
-#define __FG_SOCKET_H 1
-#   include <Core/Macros.h>
-#   include <Core/Types.h>
-#   include <ostream>
-#   include <istream>
+#ifndef __FGCORE_NETWORK_SOCKET
+#define __FGCORE_NETWORK_SOCKET 1
 
-#   define NET_WORK_NS Network
+#include <FGCore/Event.h>
 
-FG_NS_EXT_BEGIN( NET_WORK_NS )
 
-class Package :
- 	basic_istream<char>
-{
-	
-	friend class Netio;
+namespace FGSocket {
 
-public:
-	
-	Package();
+	using namespace std;
+	using namespace FGCore;
 
-	virtual ~Package(void);
+	class Session;
+	class IOStream;
+	class Client;
+	class Server;
+	class NetArgs;
 
-	template<class T>
-	Pakage& operator <<(const T & t){
-		basic_istream<<t;
-		return *this;
+
+	typedef enum {
+		TCP,
+	} Type;
+
+	class IOStream {
+
 	};
 
-protected:
+	class Package {
+
+	};
+
+	class Session : public EventDispatcher {
+
+	};
+
+	class Client {
 	
-	size_t GetSize(void) const;
+	protected:
+		
+		Client();
 
-	const char* Get_Str(void) const;
+	public:
 
-};
+		virtual ~Client(void);
+	};
 
-class Handler {
-
-public:
+	class Server {
 	
-	virtual ~Handler();
+	protected:
 
-protected:
+		Server();
 
-	virtual void Handle(Package &pakage) = 0;
+	public:
+		
+		virtual ~Server();
 
+		virtual int Accept();
+	};
 };
-
-
-class Channel {
-public:
-	Client();
-
-   ~Socket();
-
-   bool isValid();
-
-   int getHandle();
-
-private:
-	
-   int clientId;
-};
-
-class Client
-{
-public:
-   Client(std::string host,int port);
-
-   ~Client();
-
-   bool IsValid();
-
-   int GetChannel();
-};
-
-class Server
-{
-public:
-   
-   ServerSocket(int port) throw(SocketException);
-   
-   ~ServerSocket();
-
-   bool isValid();
-  
-private:
-   int socketHdlM; // handle of the server socket
-};
-
-FG_NS_EXT_END
 
 #endif
