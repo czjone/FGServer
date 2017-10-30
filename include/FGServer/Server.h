@@ -8,18 +8,18 @@
 
 using namespace FGSocket;
 
+class OnError ;
+class OnConnected ;
+class OnShutDOWN ;
+
 class FGServer : 
 virtual public EventDispatcher, 
 virtual public FGSocket::Server {
 
 public:
-	typedef enum { 
-		ON_CLIENT_CONNECT,
-		ON_CLIENT_SHUTDOWN,
-		ON_SERVER_ERROR,
-	}EVENT_TYPE;	
 
 	typedef int SessionId;
+
 private:
 
 	int mRet;
@@ -37,7 +37,6 @@ public:
 private:
 
 	inline int GetRet() { return mRet; };
-
 };
 
 #endif

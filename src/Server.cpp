@@ -15,7 +15,6 @@ FGServer::~FGServer(){
 }
 
 int FGServer::Accept(){
-	FGSocket::Server::addEventlistener(FGSocket::Server::EVENTType::ON_CLIENT_CONNECTED,EventHandler * handler);
 	FGSocket::Server::Accept();
 	return this->GetRet();
 }
@@ -28,6 +27,3 @@ int FGServer::Accept(){
 	}
  
 #endif
-
-
-

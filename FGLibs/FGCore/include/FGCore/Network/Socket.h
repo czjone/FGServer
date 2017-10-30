@@ -44,6 +44,14 @@ namespace FGSocket {
 	};
 
 	class Server {
+
+	public:
+		typedef enum {
+			ON_CLIENT_CONNECTED,
+			ON_DISCONNECT,
+			ON_SHUTDOWN,
+			ON_ERROR,
+		} EVENTType;
 	
 	protected:
 
