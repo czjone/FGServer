@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/FGSNode.dir/src/Server.cpp.o  -o FGSNode  -L/Users/solyess/Works/FGFramework/FGServer/FGLibs/FGCore/libs/Mac -Wl,-rpath,/Users/solyess/Works/FGFramework/FGServer/FGLibs/FGCore/libs/Mac  -lFGCore 
