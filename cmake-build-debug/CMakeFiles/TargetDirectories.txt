@@ -1,3 +1,0 @@
-/Users/solyess/Works/FGFramework/FGServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/solyess/Works/FGFramework/FGServer/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/solyess/Works/FGFramework/FGServer/cmake-build-debug/CMakeFiles/FGSNode.dir
